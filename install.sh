@@ -3,7 +3,14 @@
 # sudo apt-get install perl mysql-server php5 apache2 php5-mysql php5-cli libapache2-mod-php5 -y
 
 #java stuff
-sudo apt-get install sun-java6-plugin sun-java6-jdk sun-java6-jre sun-java6-bin -y         
+# Add necessary PPAs
+sudo add-apt-repository ppa:webupd8team/java
+
+sudo apt-get update
+
+# Install Java
+sudo apt-get install oracle-java7-installer -y         
+
 #sudo apt-get install eclipse -y
 
 #c++
@@ -39,7 +46,9 @@ sudo apt-get install ubuntu-restricted-extras -y
 # LaTeX
 sudo apt-get install texlive texlive-base texlive-pictures texlive-publishers texlive-math-extra texlive-science texlive-extra-utils texlive-latex-extra  -y
 
-sudo apt-get install vlc faac libfaac0 libfaac-dev
+sudo apt-get install vlc faac libfaac0 libfaac-dev  -y
 
 
-sudo apt-get install python 
+sudo apt-get install python -y
+sudo apt-get install git -y
+sudo apt-get install scala -y
