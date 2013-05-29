@@ -57,3 +57,5 @@ sudo apt-get install scala -y
 sudo apt-get install python-dev -y
 pip install numpy 
 pip install scikit-learn 
+
+bash ./workspace.sh
