@@ -8,6 +8,7 @@ sudo add-apt-repository ppa:webupd8team/java
 
 sudo apt-get update
 
+
 # Install Java
 sudo apt-get install oracle-java7-installer -y         
 
@@ -29,13 +30,12 @@ sudo apt-get install filezilla -y
 # sudo apt-get install pidgin -y
 # sudo apt-get install xchm -y
 # sudo apt-get install skype -y
-# sudo apt-get install google-chrome-beta
-# sudo apt-get install community-themes -y
-# sudo apt-get install ttf-droid -y
-# sudo apt-get install msttcorefonts -y
+sudo apt-get install community-themes -y
+sudo apt-get install ttf-droid -y
+sudo apt-get install msttcorefonts -y
 #sudo apt-get install sensors-applet -y
-sudo apt-get install gimp
-sudo apt-get install xchat
+sudo apt-get install gimp -y
+sudo apt-get install xchat -y
 
 #other nautilus plugins
 sudo apt-get install nautilus-open-terminal nautilus-data nautilus-gksu nautilus-share -y
@@ -56,4 +56,4 @@ sudo apt-get install scala -y
 # Python machine learning stuff
 sudo apt-get install python-dev -y
 pip install numpy 
-pip install scikit-learn
+pip install scikit-learn 
