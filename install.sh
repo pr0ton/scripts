@@ -3,16 +3,7 @@
 # sudo apt-get install perl mysql-server php5 apache2 php5-mysql php5-cli libapache2-mod-php5 -y
 
 #java stuff
-# Add necessary PPAs
-sudo add-apt-repository ppa:webupd8team/java
-
 sudo apt-get update
-
-
-# Install Java
-sudo apt-get install oracle-java7-installer -y         
-
-#sudo apt-get install eclipse -y
 
 #c++
 sudo apt-get install g++ -y         
