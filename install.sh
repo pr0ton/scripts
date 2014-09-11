@@ -44,9 +44,3 @@ sudo apt-get install python -y
 sudo apt-get install git -y
 sudo apt-get install scala -y
 
-# Python machine learning stuff
-sudo apt-get install python-dev -y
-pip install numpy 
-pip install scikit-learn 
-
-bash ./workspace.sh
