@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# for maven 3
+sudo add-apt-repository "deb http://ppa.launchpad.net/natecarlson/maven3/ubuntu precise main"
+
 sudo apt-get update
 
 #web server stuff
@@ -9,8 +13,15 @@ sudo apt-get install libxss1 libappindicator1 libindicator7 -y
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 
+# install google drive
+sudo apt-get install grive
+
+# todo (find a way to install dropbox)
+
 #java stuff
 sudo apt-get install openjdk-7-jdk -y
+sudo apt-get install maven3 -y
+
 
 #c++
 sudo apt-get install g++ -y         
