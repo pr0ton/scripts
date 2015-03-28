@@ -1,9 +1,12 @@
 #!/bin/bash
+sudo apt-get update
+
 #web server stuff
 # sudo apt-get install perl mysql-server php5 apache2 php5-mysql php5-cli libapache2-mod-php5 -y
 
+
 #java stuff
-sudo apt-get update
+sudo apt-get install openjdk-7-jdk
 
 #c++
 sudo apt-get install g++ -y         
