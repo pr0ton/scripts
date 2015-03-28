@@ -4,9 +4,13 @@ sudo apt-get update
 #web server stuff
 # sudo apt-get install perl mysql-server php5 apache2 php5-mysql php5-cli libapache2-mod-php5 -y
 
+# install chrome
+sudo apt-get install libxss1 libappindicator1 libindicator7 -y
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
 
 #java stuff
-sudo apt-get install openjdk-7-jdk
+sudo apt-get install openjdk-7-jdk -y
 
 #c++
 sudo apt-get install g++ -y         
