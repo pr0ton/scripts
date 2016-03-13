@@ -1,40 +1,43 @@
 #!/bin/bash
 
 sudo apt-add-repository ppa:git-core/ppa
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
 
 sudo apt-get update
 
-sudo apt-get install \
-  git \
-  grive \
-  openjdk-8-jdk \
+sudo apt-get -y install \
   cmake \
+  faac \
   g++ \
-  ubuntu-restricted-extras \
   geany \
   geany-plugins \
-  qalculate-gtk \
   gimp \
-  texlive \
-  texlive-base \
-  texlive-pictures \
-  texlive-publishers \
-  texlive-math-extra \
-  texlive-science \
-  texlive-extra-utils \
-  texlive-latex-extra \
-  vlc \
-  faac \
-  libfaac0 \
+  git \
+  grive \
   libfaac-dev \
+  libfaac0 \
   nautilus-data \
   nautilus-share \
-  -y
+  openjdk-8-jdk \
+  python-pip \
+  qalculate-gtk \
+  sublime-text-installer \
+  texlive \
+  texlive-base \
+  texlive-extra-utils \
+  texlive-latex-extra \
+  texlive-math-extra \
+  texlive-pictures \
+  texlive-publishers \
+  texlive-science \
+  ubuntu-restricted-extras \
+  vlc
 
 # install chrome
-# sudo apt-get install libxss1 libappindicator1 libindicator7 -y
-# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-# sudo dpkg -i google-chrome*.deb
+cd /tmp
+sudo apt-get -y install libxss1 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 # install keepassx
 
