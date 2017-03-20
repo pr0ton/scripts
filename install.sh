@@ -8,6 +8,7 @@ sudo apt-get update
 sudo apt-get -y install \
   cmake \
   faac \
+  ffmpeg \
   g++ \
   geany \
   geany-plugins \
