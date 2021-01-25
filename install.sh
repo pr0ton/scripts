@@ -8,6 +8,8 @@ sudo apt-get update
 sudo apt-get -y install \
   cmake \
   faac \
+  exfat-fuse \
+  exfat-utils \
   ffmpeg \
   g++ \
   geany \
