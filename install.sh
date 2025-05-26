@@ -1,8 +1,5 @@
 #!/bin/bash
 
-sudo apt-add-repository ppa:git-core/ppa
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
-
 sudo apt-get update
 
 sudo apt-get -y install \
@@ -24,7 +21,6 @@ sudo apt-get -y install \
   openjdk-8-jdk \
   python-pip \
   qalculate-gtk \
-  sublime-text-installer \
   texlive \
   texlive-base \
   texlive-extra-utils \
@@ -37,20 +33,15 @@ sudo apt-get -y install \
   vlc
 
 # install chrome
-cd /tmp
-sudo apt-get -y install libxss1 libappindicator1 libindicator7
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+# cd /tmp
+# sudo apt-get -y install libxss1 libappindicator1 libindicator7
+# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+# sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-# install keepassx
-mkdir -p /tmp/kpx
-cd /tmp/kpx
-wget https://www.keepassx.org/releases/2.0.3/keepassx-2.0.3.tar.gz
-tar -xvf keepassx-2.0.3.tar.gz
-cd keepassx-2.0.3/
-mkdir build && cd build
-sudo apt-get install -y checkinstall cmake libgcrypt20-dev libqt5x11extras5-dev make qt4-default qtbase5-dev qttools5-dev qttools5-dev-tools zlib1g-dev
-cmake .. && make
-sudo checkinstall -Dy --nodoc --pkgname=keepassx --pkgversion=2.0.3 make -i install
+SNAP_PACKAGES="code keepassxc spotify"
 
-
+for package in $SNAP_PACKAGES; do
+  if ! snap list | grep -q "^$package\s"; then
+    sudo snap install "$package"
+  fi
+done
