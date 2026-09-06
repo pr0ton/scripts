@@ -12,11 +12,12 @@ Usage: ./install.sh [options]
   --no-code                 Skip Visual Studio Code
   --no-spotify              Skip Spotify
   --with-sharing            Install Nautilus network file sharing
-  --with-restricted-extras  Install optional codecs/fonts (may prompt for a license)
+  --no-restricted-extras    Skip extra codecs/fonts (included by default)
   -h, --help                Show this help
 
 Defaults: development tools, media/graphics apps, LaTeX, Chrome,
-VS Code, Spotify, and KeePassXC from stable Flathub.
+VS Code, Spotify, KeePassXC from stable Flathub, and ubuntu-restricted-extras.
+The extras package may prompt for a font license.
 HELP
 }
 
@@ -26,7 +27,7 @@ chrome=true
 code=true
 spotify=true
 sharing=false
-restricted=false
+restricted=true
 for arg in "$@"; do
   case "$arg" in
     --dry-run) dry_run=true ;;
@@ -35,7 +36,8 @@ for arg in "$@"; do
     --no-code) code=false ;;
     --no-spotify) spotify=false ;;
     --with-sharing) sharing=true ;;
-    --with-restricted-extras) restricted=true ;;
+    --no-restricted-extras) restricted=false ;;
+    --with-restricted-extras) restricted=true ;; # Backward-compatible alias
     -h|--help) usage; exit 0 ;;
     *) printf 'Unknown option: %s\n' "$arg" >&2; usage >&2; exit 2 ;;
   esac

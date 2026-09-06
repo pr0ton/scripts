@@ -22,6 +22,8 @@ Do not pipe the script into `sudo bash`: Flatpak would target root's account.
   default JDK, Python 3, pip, venv, and pipx.
 - exFAT utilities, FFmpeg, GIMP, Qalculate, and VLC.
 - LaTeX tools, Google Chrome, VS Code, and Spotify.
+- `ubuntu-restricted-extras` for additional codecs and fonts; font license
+  acceptance remains interactive.
 - KeePassXC from stable Flathub, plus GNOME Software's Flatpak integration.
 
 Geany, Dropbox, and the obsolete Grive client are not installed. Java 8,
@@ -38,8 +40,9 @@ bash install.sh --no-latex --no-spotify
 ```
 
 LaTeX is large, so use `--no-latex` if you do not need it. Network file sharing
-and restricted codecs/fonts are opt-in via `--with-sharing` and
-`--with-restricted-extras`. The latter can display a license prompt.
+is opt-in via `--with-sharing`. Restricted codecs/fonts are included by default;
+use `--no-restricted-extras` to skip them. Their font license prompt remains
+interactive. The older `--with-restricted-extras` flag still works.
 
 The script stops on errors, checks apt dependency resolution, and can be rerun.
 It installs or updates selected packages; it does not do a full system upgrade,
